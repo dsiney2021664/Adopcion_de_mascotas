@@ -30,7 +30,7 @@ const mascotasGet = async (req, res = response) => {
 
 const mascotasPut = async (req, res) => {
     const { id } = req.params;
-    const { _id,nombre, raza, sexo, ...resto} = req.body;
+    const { ...resto} = req.body;
 
     await Mascota.findByIdAndUpdate(id, resto);
 

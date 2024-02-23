@@ -3,7 +3,7 @@ const bcryptjs = require('bcryptjs');
 const Usuario = require('../models/usuario');
 
 const usuariosGet = async (req, res = response ) => {
-    const { limite, desde } = req.query;
+    const { limite , desde } = req.query;
     const query = { estado: true};
 
     const [total, usuarios] = await Promise.all([
