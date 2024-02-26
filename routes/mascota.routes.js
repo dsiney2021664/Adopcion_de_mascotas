@@ -23,7 +23,6 @@ router.put(
     [
         check("id", "El id no es un formato de MongoDB").isMongoId(),
         check("id").custom(existeMascotaById),
-        validarCampos
     ], mascotasPut);
 
 router.delete(
